@@ -7,7 +7,7 @@ function LoginPage() {
         <>
             <Navbar />
             <section id='loginpage'>
-                <div className='w-100 vh-100'>
+                <div className='w-100'>
                     <div className='container login-area'>
                         <form method='post' className='row justify-content-center align-items-center'>
                             <div className='wrapper-login border'>

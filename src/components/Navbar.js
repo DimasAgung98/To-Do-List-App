@@ -23,7 +23,10 @@ function Navbar() {
                     <div className='d-flex align-items-center'>
                         <h1 className='title-nav'>to do list app</h1>
                     </div>
-                    <div className='btn-logout' onClick={handleLogout}>Logout</div>
+                    <div className='button-area'>
+                        <div className='btn-logout' onClick={handleLogout}>Logout</div>
+                        <div className='btn-logout'>Register</div>
+                    </div>
                 </nav>
             </section>
         </>

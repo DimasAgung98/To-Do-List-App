@@ -2,8 +2,37 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MdSystemUpdateAlt, MdDeleteForever, MdOutlineDoneAll } from 'react-icons/md';
+import Swal from 'sweetalert2';
 
 function ToDo() {
+    //HANDLE CREATE
+    //HANDLE READ
+    //HANDLE UPDATE
+    //HANDLE DELETE
+    const handleDelete = () => {
+        Swal.fire({
+            title: 'Do you want to delete the task ?',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, Delete it',
+            confirmButtonColor: '#d9534f'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire('Task Has Been Deleted', '', 'success')
+            }
+        })
+    }
+    //HANDLE FINISHED
+    const handleFinished = () => {
+        Swal.fire({
+            title: 'Do you want to finish the task ?',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, Finish it',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire('Task Has Been Finished', '', 'success')
+            }
+        })
+    }
     return (
         <>
             <Navbar />
@@ -42,8 +71,8 @@ function ToDo() {
                                                 <td>In progress</td>
                                                 <td>
                                                     <button type="submit" className="btn btn-primary me-1" data-bs-toggle='tooltip' data-bs-placement='top' title='Update'><MdSystemUpdateAlt /></button>
-                                                    <button type="submit" className="btn btn-danger" data-bs-toggle='tooltip' data-bs-placement='top' title='Delete'><MdDeleteForever /></button>
-                                                    <button type="submit" className="btn btn-success ms-1" data-bs-toggle='tooltip' data-bs-placement='top' title='Finished'><MdOutlineDoneAll /></button>
+                                                    <button type="submit" className="btn btn-danger" data-bs-toggle='tooltip' data-bs-placement='top' title='Delete' onClick={handleDelete}><MdDeleteForever /></button>
+                                                    <button type="submit" className="btn btn-success ms-1" data-bs-toggle='tooltip' data-bs-placement='top' title='Finished' onClick={handleFinished}><MdOutlineDoneAll /></button>
                                                 </td>
                                             </tr>
                                             <tr>
