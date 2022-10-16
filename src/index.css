@@ -28,6 +28,11 @@ nav {
   cursor: pointer;
   text-transform: uppercase;
   color: white;
+  text-decoration: none !important;
+}
+
+.title-nav:hover {
+  color: white;
 }
 
 .bg-nav {
@@ -41,12 +46,43 @@ nav {
   cursor: pointer;
 }
 
-/* LOGIN FORM */
+/* LOGIN and REGISTER FORM */
+
+.landing-area {
+  padding-top: 300px;
+}
+
 .login-area {
   padding-top: 200px;
 }
 
+.register-area {
+  padding-top: 200px;
+}
+
+.wrapper-landing {
+  height: auto;
+  width: 400px !important;
+  border-radius: 20px;
+  padding: 40px 0 40px 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
 .wrapper-login {
+  height: auto;
+  width: 400px !important;
+  border-radius: 20px;
+  padding: 40px 0 40px 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.wrapper-register {
   height: auto;
   width: 400px !important;
   border-radius: 20px;
@@ -64,8 +100,8 @@ nav {
 }
 
 .pin-box input {
-  width: 50px;
-  font-size: 32px;
+  width: 300px;
+  font-size: 24px;
   padding: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
