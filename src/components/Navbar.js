@@ -15,6 +15,7 @@ function Navbar() {
             showConfirmButton: false,
             timer: 1500
         })
+        localStorage.clear('token')
         navigate('/')
     }
     return (
@@ -26,7 +27,8 @@ function Navbar() {
                     </div>
                     <div className='button-area'>
                         <div className='btn-logout' onClick={handleLogout}>Logout</div>
-                        <div className='btn-logout'>Register</div>
+                        <NavLink to='/register'><div className='btn-logout'>Register</div></NavLink>
+                        <NavLink to='/login'><div className='btn-logout'>Login</div></NavLink>
                     </div>
                 </nav>
             </section>
